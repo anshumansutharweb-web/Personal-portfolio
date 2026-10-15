@@ -1,569 +1,1391 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AS Tech Studio | Full-Service Software Development &amp; AI Solutions Company</title>
+  <meta name="description" content="AS Tech Studio is a full-service digital product engineering and AI solutions company. We engineer high-performance web applications, mobile apps, SaaS platforms, and intelligent AI workflows for clients in India, USA, Dubai, and worldwide.">
+  <meta name="theme-color" content="#070a14">
 
-  <meta
-    name="description"
-    content="AS Tech Studio builds modern websites, AI dashboards, landing pages and workflow automation solutions for businesses in India and worldwide."
-  >
-  <meta name="theme-color" content="#0b1220">
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AS Tech Studio | Full-Service Software Development &amp; AI Solutions Company">
+  <meta property="og:description" content="We engineer scalable web platforms, native mobile apps, and intelligent AI systems. End-to-end product lifecycle engineering for ambitious businesses worldwide.">
+  <meta property="og:url" content="https://anshumansutharweb-web.github.io/Personal-portfolio/">
 
-  <meta name="robots" content="index, follow">
+  <!-- High-Resolution SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='brandG' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='50%25' stop-color='%234f46e5'/%3E%3Cstop offset='100%25' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23070a14'/%3E%3Crect x='3' y='3' width='94' height='94' rx='19' fill='none' stroke='url(%23brandG)' stroke-width='2.5'/%3E%3Ctext x='50' y='64' font-family='sans-serif' font-weight='900' font-size='42' fill='%23ffffff' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
 
-  <title>AS Tech Studio | Websites, AI Dashboards &amp; Automation</title>
-
+  <!-- Typography: Space Grotesk (Headlines) + Inter (Interface & Body) + IBM Plex Mono (Technical Metadata) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<header>
-  <a class="brand" href="#home" aria-label="AS Tech Studio home">
-    <span class="logo">AS</span> AS Tech Studio<span class="pink">.</span>
-  </a>
+  <!-- Accessible Skip Link -->
+  <a href="#home" class="skip-link">Skip to main content</a>
 
-  <button
-    id="toggle"
-    type="button"
-    aria-label="Toggle navigation"
-    aria-controls="nav"
-    aria-expanded="false"
-  >
-    ☰
-  </button>
+  <!-- Header Navigation -->
+  <header id="header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="#home" aria-label="AS Tech Studio Home">
+        <span class="logo">AS</span>
+        <div class="brand-text-group">
+          <span class="brand-text">AS Tech Studio<span class="dot">.</span></span>
+          <span class="brand-subline">Software &amp; AI Studio</span>
+        </div>
+      </a>
 
-  <nav id="nav" aria-label="Main navigation">
-    <a href="#work">Portfolio</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a class="navbtn" href="#contact">Start a project ↗</a>
-  </nav>
-</header>
+      <button id="toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-<main>
-  <!-- HERO -->
-  <section class="hero wrap" id="home">
-    <div>
-      <div class="availability">
-        <i></i> OPEN TO PROJECT ENQUIRIES
-      </div>
-
-      <p class="eyebrow">
-        WEB DEVELOPMENT · AI SOLUTIONS · AUTOMATION
-      </p>
-
-      <h1>
-        Modern websites.<br>
-        <span class="gradient">Intelligent digital solutions.</span>
-      </h1>
-
-      <p class="lead">
-        AS Tech Studio helps businesses turn ideas into modern websites,
-        interactive dashboards and practical automation solutions.
-        Clear communication, responsive experiences and solutions built
-        around your goals.
-      </p>
-
-      <div class="actions">
-        <a class="btn" href="#contact">Discuss your project ↗</a>
-        <a class="textlink" href="#work">Explore demo projects ↓</a>
-      </div>
-
-      <p class="subnote">
-        Web development · AI-assisted solutions · Built for real business needs.
-      </p>
+      <nav id="nav">
+        <a href="#services" class="nav-link">Solutions</a>
+        <a href="#work" class="nav-link">Showcases</a>
+        <a href="#process" class="nav-link">Lifecycle</a>
+        <a href="#tech" class="nav-link">Capabilities</a>
+        <a href="#about" class="nav-link">About Studio</a>
+        <a class="navbtn" href="#contact">Start a Project ↗</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="heroart">
-      <div class="orbit"></div>
+  <main>
+    <!-- Hero Section: Cinematic High-Impact Visual Command Center -->
+    <section class="hero-section" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <div class="studio-badge">
+            <span class="pulse-indicator"></span>
+            <span>DIGITAL PRODUCTS, WEBSITES &amp; AI SOLUTIONS</span>
+          </div>
 
-      <div class="code">
-        <div class="codetop">
-          <span>● <b>●</b> <i>●</i></span>
-          AS Tech Studio
-          <span>•••</span>
+          <h1 class="hero-title">
+            Modern Websites. Smarter Software. <span class="gradient-text">Practical AI Solutions.</span>
+          </h1>
+
+          <p class="hero-description">
+            AS Tech Studio helps businesses build professional websites, custom web applications, and practical AI-powered workflows. From initial planning to responsive development and deployment, we focus on clear communication, thoughtful design, and solutions built around real business needs.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a Project ↗</a>
+            <a class="btn btn-secondary" href="#work">Explore Our Work ↓</a>
+          </div>
+
+          <!-- Studio Operational Capabilities Ticker -->
+          <div class="hero-specs-ticker">
+            <div class="spec-node">
+              <span class="node-bullet"></span>
+              <span>Business Websites &amp; Landing Pages</span>
+            </div>
+            <div class="spec-node">
+              <span class="node-bullet"></span>
+              <span>Custom Web Applications &amp; Dashboards</span>
+            </div>
+            <div class="spec-node">
+              <span class="node-bullet"></span>
+              <span>Practical AI &amp; Automation Workflows</span>
+            </div>
+            <div class="spec-node">
+              <span class="node-bullet"></span>
+              <span>Timezones: India (IST) · Dubai (GST) · US (EST)</span>
+            </div>
+          </div>
         </div>
 
-        <pre><span>01</span> <em>const</em> idea = <strong>'your business idea'</strong>;
+        <!-- Hero Custom Visual: Multi-Device Digital Product & AI Showcase -->
+        <div class="hero-visual-col" aria-hidden="true">
+          <div class="ecosystem-composition">
+            <!-- Primary Showcase: Desktop Application Frame (Pulse OS Demo Concept) -->
+            <div class="device-window main-window">
+              <div class="window-topbar">
+                <div class="traffic-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="window-title-tab">
+                  <svg class="tech-svg-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span>Pulse OS (Demo Concept) · Business Telemetry UI</span>
+                </div>
+                <div class="window-metric-tag">SIMULATED INTERFACE</div>
+              </div>
 
-<span>02</span> <em>function</em> <a>buildSolution</a>() {
+              <div class="window-viewport">
+                <!-- Top Telemetry Stream -->
+                <div class="telemetry-bar">
+                  <div class="stream-stat">
+                    <small>SESSION VELOCITY</small>
+                    <b>2,840 events/hr</b>
+                    <span class="trend-pill green">● Simulated Stream</span>
+                  </div>
+                  <div class="stream-stat">
+                    <small>QUERY PROCESSING</small>
+                    <b>Sub-Second</b>
+                    <span class="trend-pill blue">Indexed Schema</span>
+                  </div>
+                  <div class="stream-stat hide-sm">
+                    <small>INTERFACE STATUS</small>
+                    <b>Active Layout</b>
+                    <span class="trend-pill purple">Interactive UI</span>
+                  </div>
+                </div>
 
-<span>03</span>   <em>return</em> createValue(idea);
+                <!-- Rich Multi-Gradient SVG Area Telemetry Curve -->
+                <div class="telemetry-chart-container">
+                  <div class="chart-header-row">
+                    <span>Sample Event Velocity (Illustrative Concept)</span>
+                    <span class="chart-tag">Demo Preview</span>
+                  </div>
+                  <svg class="telemetry-svg" viewBox="0 0 520 100" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="heroAiGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+                        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+                      </linearGradient>
+                      <linearGradient id="heroAiGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0"/>
+                      </linearGradient>
+                    </defs>
+                    <line x1="0" y1="25" x2="520" y2="25" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3,3" stroke-width="1"/>
+                    <line x1="0" y1="65" x2="520" y2="65" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3,3" stroke-width="1"/>
+                    <!-- Curve 2: Purple Layer -->
+                    <path d="M0,85 Q65,70 130,55 T260,42 T390,25 T520,14 L520,100 L0,100 Z" fill="url(#heroAiGrad2)"/>
+                    <!-- Curve 1: Electric Cyan Layer -->
+                    <path d="M0,75 Q65,60 130,45 T260,32 T390,18 T520,10 L520,100 L0,100 Z" fill="url(#heroAiGrad1)"/>
+                    <path d="M0,75 Q65,60 130,45 T260,32 T390,18 T520,10" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+                    <circle cx="260" cy="32" r="4" fill="#38bdf8"/>
+                    <circle cx="390" cy="18" r="4" fill="#38bdf8"/>
+                    <circle cx="520" cy="10" r="4.5" fill="#60a5fa"/>
+                  </svg>
+                </div>
 
-<span>04</span> }</pre>
+                <!-- Live Infrastructure Logs -->
+                <div class="infrastructure-logs">
+                  <div class="log-line">
+                    <span class="log-indicator green"></span>
+                    <span class="log-text">Sample Workflow: Automated data formatting completed</span>
+                    <span class="log-time">0.2s</span>
+                  </div>
+                  <div class="log-line">
+                    <span class="log-indicator blue"></span>
+                    <span class="log-text">Component Hierarchy: Clean responsive layout verified</span>
+                    <span class="log-time">1.1s</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <div class="codefoot">
-          ● Ready to build
-          <span>WEB · AI · AUTOMATION</span>
+            <!-- Overlapping Mobile Device Mockup (Smartphone Frame) -->
+            <div class="device-mobile-frame">
+              <div class="mobile-speaker-notch"></div>
+              <div class="mobile-screen-content">
+                <div class="mobile-app-header">
+                  <b>Forma Mobile</b>
+                  <span>Cart (2)</span>
+                </div>
+                <div class="mobile-product-card">
+                  <div class="mobile-product-preview">
+                    <!-- Refined Mini Ceramic Vase Vector Artwork -->
+                    <svg class="mini-art-vase" width="36" height="50" viewBox="0 0 36 50">
+                      <defs>
+                        <linearGradient id="miniVaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#dfcfbe"/>
+                          <stop offset="50%" stop-color="#c4af98"/>
+                          <stop offset="100%" stop-color="#8a735c"/>
+                        </linearGradient>
+                      </defs>
+                      <ellipse cx="18" cy="46" rx="14" ry="3.5" fill="rgba(0,0,0,0.12)"/>
+                      <path d="M14 6 C14 4, 22 4, 22 6 L21 14 C28 20, 30 32, 28 42 C26 46, 10 46, 8 42 C6 32, 8 20, 15 14 Z" fill="url(#miniVaseGrad)"/>
+                      <ellipse cx="18" cy="6" rx="4" ry="1.2" fill="#ab9780"/>
+                    </svg>
+                  </div>
+                  <div class="mobile-product-details">
+                    <small>SCANDINAVIAN COLLECTION</small>
+                    <h5>Nordic Stoneware</h5>
+                    <div class="mobile-price-row">
+                      <b>$280</b>
+                      <span class="btn-quick-buy">Order ↗</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overlapping AI Copilot Panel (Interactive Floating Widget) -->
+            <div class="copilot-floating-card">
+              <div class="copilot-header">
+                <span class="copilot-badge">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  AI ASSISTANT (DEMO CONCEPT)
+                </span>
+                <span class="copilot-status">● Ready</span>
+              </div>
+              <p class="copilot-msg">
+                "Sample workflow: 'Summarize monthly analytics and prepare export summary table.'"
+              </p>
+              <div class="copilot-actions">
+                <span class="pill-act active">Sample Action</span>
+                <span class="pill-act">View Workflow</span>
+              </div>
+            </div>
+
+            <!-- Client Timezone Compatibility Badge -->
+            <div class="edge-latency-badge">
+              <span class="latency-dot"></span>
+              <span>Client Timezones Aligned: India (IST) · Dubai (GST) · US (EST)</span>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="float top">
-        ✳
-        <span>
-          <b>Modern UI</b>
-          <small>Designed with purpose</small>
-        </span>
+    <!-- Business Value & Full-Lifecycle Positioning -->
+    <section class="trust-strip-section" aria-label="Company Capabilities">
+      <div class="wrap">
+        <div class="trust-grid">
+          <div class="trust-card">
+            <span class="trust-idx">01</span>
+            <div class="trust-body">
+              <h3>End-to-End Product Engineering</h3>
+              <p>We manage idea validation, architecture blueprints, UI/UX design, custom engineering, QA, and deployment as one cohesive workflow.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <span class="trust-idx">02</span>
+            <div class="trust-body">
+              <h3>Intelligent AI &amp; Automation</h3>
+              <p>We design custom AI agents, LLM integrations, and business workflow automations that unlock efficiency and save hours of manual operations.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <span class="trust-idx">03</span>
+            <div class="trust-body">
+              <h3>Cross-Platform Agility</h3>
+              <p>Engineered to operate seamlessly across web browsers, iOS, Android, and internal enterprise systems with unified backend APIs.</p>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <span class="trust-idx">04</span>
+            <div class="trust-body">
+              <h3>International Delivery Standards</h3>
+              <p>Direct founder communication, transparent milestone tracking, and dedicated timezone alignment for clients in India, USA, and Dubai.</p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="float bottom">
-        ↗
-        <span>
-          <b>Responsive</b>
-          <small>Every screen matters</small>
-        </span>
+    <!-- Full-Service Solutions Architecture (6 Comprehensive Capability Suites) -->
+    <section class="section services-section" id="services">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="kicker">COMPREHENSIVE CAPABILITIES</span>
+          <h2 class="title">Full-Service Digital Product &amp; AI Engineering</h2>
+          <p class="subtitle">
+            We focus on three primary starting services: <strong>Business Websites &amp; Landing Pages</strong>, <strong>Custom Web Applications &amp; Dashboards</strong>, and <strong>Practical AI &amp; Workflow Automation</strong>—supported by cross-platform mobile apps, cloud infrastructure, and ongoing technical maintenance.
+          </p>
+        </div>
+
+        <div class="services-mosaic">
+          <!-- Suite 1: Website Development (Wide Panel with Live Browser Frame) -->
+          <article class="service-panel panel-wide">
+            <div class="panel-info">
+              <div class="suite-header">
+                <span class="suite-tag">CAPABILITY SUITE 01</span>
+                <span class="suite-type">FLAGSHIP WEB ENGINEERING</span>
+              </div>
+              <h3>Website Development</h3>
+              <p>
+                We architect high-performance websites engineered to establish instant credibility, articulate complex offerings, and convert high-value international visitors.
+              </p>
+              <div class="capabilities-tags">
+                <span>Business Websites</span>
+                <span>High-Converting Landing Pages</span>
+                <span>Editorial &amp; Luxury E-Commerce</span>
+                <span>Custom Web Applications</span>
+                <span>Booking &amp; Customer Portals</span>
+              </div>
+              <a href="#contact" class="suite-cta">Discuss Your Requirements ↗</a>
+            </div>
+
+            <div class="panel-visual">
+              <div class="mockup-browser-frame">
+                <div class="browser-header">
+                  <span class="b-dot red"></span>
+                  <span class="b-dot yellow"></span>
+                  <span class="b-dot green"></span>
+                  <span class="browser-address">astechstudio.com/solutions/enterprise-web</span>
+                </div>
+                <div class="browser-screen">
+                  <div class="site-nav-sample">
+                    <span class="sample-logo">AS</span>
+                    <span class="sample-navs"><span>Overview</span><span>Solutions</span><span>Enterprise</span></span>
+                  </div>
+                  <div class="site-hero-sample">
+                    <small>GLOBAL PLATFORM ARCHITECTURE</small>
+                    <h5>Engineered for International Market Authority</h5>
+                    <div class="sample-btn-row">
+                      <span class="btn-sample-dark">Explore Platform</span>
+                      <span class="btn-sample-outline">Case Study</span>
+                    </div>
+                  </div>
+                  <div class="site-cards-sample">
+                    <div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Suite 2: Mobile App Development (Dual Smartphone Frame Visual) -->
+          <article class="service-panel panel-half">
+            <div class="panel-info">
+              <div class="suite-header">
+                <span class="suite-tag">CAPABILITY SUITE 02</span>
+                <span class="suite-type">MOBILE ENGINEERING</span>
+              </div>
+              <h3>Mobile App Development</h3>
+              <p>
+                Responsive, high-performance mobile applications engineered for seamless user onboarding, offline resilience, and fast client-server synchronization.
+              </p>
+              <div class="capabilities-tags">
+                <span>Android Applications</span>
+                <span>iOS Applications</span>
+                <span>Cross-Platform Frameworks</span>
+                <span>Business &amp; Customer Apps</span>
+              </div>
+            </div>
+
+            <div class="panel-visual visual-mobile-demo">
+              <div class="dual-phone-visual">
+                <div class="phone-card-mini phone-ios">
+                  <div class="phone-notch"></div>
+                  <div class="phone-ui">
+                    <small>iOS APP</small>
+                    <b>Customer Portal</b>
+                    <span class="phone-chip">✓ Secure Biometric Auth</span>
+                  </div>
+                </div>
+                <div class="phone-card-mini phone-android">
+                  <div class="phone-cam"></div>
+                  <div class="phone-ui">
+                    <small>ANDROID APP</small>
+                    <b>Business Suite</b>
+                    <span class="phone-chip">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="display:inline-block; vertical-align:middle; margin-right:2px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                      Sub-Second Sync
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Suite 3: AI & Automation (Agentic Workflow Diagram Visual) -->
+          <article class="service-panel panel-half">
+            <div class="panel-info">
+              <div class="suite-header">
+                <span class="suite-tag">CAPABILITY SUITE 03</span>
+                <span class="suite-type">INTELLIGENCE</span>
+              </div>
+              <h3>AI &amp; Automation</h3>
+              <p>
+                Custom artificial intelligence integrations, automated decision workflows, and conversational assistants tailored to eliminate repetitive operational bottlenecks.
+              </p>
+              <div class="capabilities-tags">
+                <span>AI Assistants &amp; Chatbots</span>
+                <span>AI-Powered Applications</span>
+                <span>Business Workflow Automation</span>
+                <span>AI Dashboards &amp; Agent Integrations</span>
+                <span>API Orchestrations</span>
+              </div>
+            </div>
+
+            <div class="panel-visual visual-ai-demo">
+              <div class="workflow-flowchart">
+                <div class="flow-node node-input">
+                  <small>USER REQUEST</small>
+                  <b>Query / Trigger</b>
+                </div>
+                <div class="flow-arr">↓ Neural Routing</div>
+                <div class="flow-node node-agent">
+                  <small>AI REASONING CORE</small>
+                  <b>Autonomous Agent Loop</b>
+                </div>
+                <div class="flow-arr">↓ Verified Action</div>
+                <div class="flow-node node-output">
+                  <small>AUTOMATED OUTPUT</small>
+                  <b>Workflow Executed</b>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Suite 4: SaaS & Custom Software (Multi-Tenant Workspace Visual) -->
+          <article class="service-panel panel-half">
+            <div class="panel-info">
+              <div class="suite-header">
+                <span class="suite-tag">CAPABILITY SUITE 04</span>
+                <span class="suite-type">SOFTWARE PRODUCTS</span>
+              </div>
+              <h3>SaaS &amp; Custom Software</h3>
+              <p>
+                Scalable B2B and consumer software platforms built with multi-tenant architecture, subscription billing logic, and modular role-based permission tiers.
+              </p>
+              <div class="capabilities-tags">
+                <span>SaaS Platforms</span>
+                <span>CRM &amp; ERP Systems</span>
+                <span>Admin Dashboards</span>
+                <span>Internal Business Software</span>
+                <span>Subscription Applications</span>
+              </div>
+            </div>
+
+            <div class="panel-visual visual-saas-demo">
+              <div class="saas-preview-card">
+                <div class="saas-card-top">
+                  <span>WORKSPACE ENGINE</span>
+                  <span class="badge-role">Admin Tier</span>
+                </div>
+                <div class="saas-user-row">
+                  <div class="user-avatar-stack">
+                    <span>JD</span><span>AM</span><span>SK</span>
+                  </div>
+                  <small>240 Active Team Members</small>
+                </div>
+                <div class="saas-billing-pill">
+                  <b>Enterprise Tier</b> · Annual Billing Active
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Suite 5: Backend, Cloud & DevOps (Infrastructure Topology Visual) -->
+          <article class="service-panel panel-half">
+            <div class="panel-info">
+              <div class="suite-header">
+                <span class="suite-tag">CAPABILITY SUITE 05</span>
+                <span class="suite-type">INFRASTRUCTURE</span>
+              </div>
+              <h3>Backend, Cloud &amp; DevOps</h3>
+              <p>
+                Rock-solid server-side architectures, robust API data contracts, automated continuous integration, and security-first cloud deployment pipelines.
+              </p>
+              <div class="capabilities-tags">
+                <span>Backend Development</span>
+                <span>Databases &amp; API Engineering</span>
+                <span>Cloud Deployment</span>
+                <span>CI/CD &amp; Monitoring</span>
+                <span>Security-Conscious Engineering</span>
+              </div>
+            </div>
+
+            <div class="panel-visual visual-devops-demo">
+              <div class="infra-diagram">
+                <div class="infra-box box-gateway">
+                  <small>GATEWAY</small>
+                  <b>REST &amp; GraphQL API</b>
+                </div>
+                <div class="infra-connector">↕ Load Balancer &amp; Auth</div>
+                <div class="infra-box box-cloud">
+                  <small>SERVICES</small>
+                  <b>Node.js / Express Cluster</b>
+                </div>
+                <div class="infra-connector">↕ Replicated Cluster</div>
+                <div class="infra-box box-db">
+                  <small>PERSISTENCE</small>
+                  <b>Cloud Database &amp; Cache</b>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Suite 6: UI/UX, QA & Ongoing Support (Design & Quality Visual) -->
+          <article class="service-panel panel-wide">
+            <div class="panel-info">
+              <div class="suite-header">
+                <span class="suite-tag">CAPABILITY SUITE 06</span>
+                <span class="suite-type">QUALITY &amp; EVOLUTION</span>
+              </div>
+              <h3>UI/UX, QA &amp; Ongoing Support</h3>
+              <p>
+                We do not abandon products at launch. We provide user experience iterations, continuous automated testing, performance tuning, and long-term technical consulting.
+              </p>
+              <div class="capabilities-tags">
+                <span>UI/UX &amp; Product Design</span>
+                <span>Website &amp; Application Redesign</span>
+                <span>Testing &amp; Quality Assurance</span>
+                <span>Performance Optimization (Core Web Vitals)</span>
+                <span>Maintenance &amp; Technical Consulting</span>
+              </div>
+              <a href="#contact" class="suite-cta">Request a Quote ↗</a>
+            </div>
+
+            <div class="panel-visual visual-qa-demo">
+              <div class="qa-audit-card">
+                <div class="qa-score-header">
+                  <span>LIGHTHOUSE PERFORMANCE TARGETS</span>
+                  <span class="score-pill">TARGET: 90+</span>
+                </div>
+                <div class="qa-metrics-row">
+                  <div class="qa-stat">
+                    <small>PERFORMANCE</small>
+                    <b class="green">90+</b>
+                  </div>
+                  <div class="qa-stat">
+                    <small>ACCESSIBILITY</small>
+                    <b class="green">High</b>
+                  </div>
+                  <div class="qa-stat">
+                    <small>BEST PRACTICES</small>
+                    <b class="green">Standard</b>
+                  </div>
+                  <div class="qa-stat">
+                    <small>SEO TARGET</small>
+                    <b class="green">Optimized</b>
+                  </div>
+                </div>
+                <div class="qa-check-list">
+                  <span>✓ Clean Semantic HTML5 Markup</span>
+                  <span>✓ Responsive Layout Validation</span>
+                  <span>✓ Cross-Browser Compatibility Verified</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TOOLKIT -->
-  <div class="toolstrip wrap">
-    <span>OUR TOOLKIT</span>
-    <b>HTML5</b>
-    <b>CSS3</b>
-    <b>JavaScript</b>
-    <b>React</b>
-    <b>Node.js</b>
-    <b>Git &amp; GitHub</b>
-  </div>
+    <!-- Featured Demo Projects: Rich Concept Showcases -->
+    <section class="section portfolio-section" id="work">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="kicker kicker-light">FEATURED DEMO CONCEPTS</span>
+          <h2 class="title title-light">Proof of Product Craft &amp; Engineering Rigor</h2>
+          <p class="subtitle subtitle-light">
+            Explore three distinct demo concepts built by AS Tech Studio to showcase our range in analytics intelligence, luxury commerce, and B2B SaaS architecture.
+          </p>
+        </div>
 
-  <!-- PORTFOLIO -->
-  <section class="wrap section" id="work">
-    <div class="sectionhead">
-      <div>
-        <p class="eyebrow">PORTFOLIO CONCEPTS</p>
-        <h2>
-          Ideas brought to life.<br>
-          <span class="gradient">Built for what’s next.</span>
-        </h2>
+        <div class="showcase-grid">
+          <!-- Concept 1: Pulse Analytics (Enterprise Telemetry Dashboard) -->
+          <article class="showcase-card showcase-pulse">
+            <div class="showcase-visual-side">
+              <div class="pulse-display-frame">
+                <div class="display-chrome">
+                  <div class="chrome-controls">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="chrome-address">pulse.astechstudio.demo/dashboard</span>
+                  <span class="chrome-badge">DEMO CONCEPT PREVIEW</span>
+                </div>
+
+                <div class="display-screen">
+                  <div class="screen-sidebar">
+                    <span class="sb-logo">P.</span>
+                    <hr>
+                    <span class="sb-icon active">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </span>
+                    <span class="sb-icon">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </span>
+                    <span class="sb-icon">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    </span>
+                    <span class="sb-icon">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </span>
+                  </div>
+
+                  <div class="screen-body">
+                    <div class="sb-top-stats">
+                      <div class="stat-pill-box">
+                        <small>SESSION VELOCITY</small>
+                        <b>12,840 / hr</b>
+                        <span class="pill-green">● Simulated Stream</span>
+                      </div>
+                      <div class="stat-pill-box">
+                        <small>QUERY PROCESSING</small>
+                        <b>Indexed</b>
+                        <span class="pill-blue">Demo Telemetry</span>
+                      </div>
+                      <div class="stat-pill-box hide-mobile">
+                        <small>CONVERSION RATE</small>
+                        <b>4.86%</b>
+                        <span class="pill-purple">Sample Metric</span>
+                      </div>
+                    </div>
+
+                    <div class="sb-chart-area">
+                      <div class="chart-legend-row">
+                        <span>Traffic Ingest (Sample 24 Hours)</span>
+                        <span>Simulated Flow</span>
+                      </div>
+                      <div class="pulse-bars-flex">
+                        <span style="height: 35%;"></span>
+                        <span style="height: 52%;"></span>
+                        <span style="height: 44%;"></span>
+                        <span style="height: 72%;"></span>
+                        <span style="height: 58%;"></span>
+                        <span style="height: 88%;"></span>
+                        <span style="height: 64%;"></span>
+                        <span style="height: 96%;"></span>
+                        <span style="height: 82%;"></span>
+                        <span style="height: 100%;"></span>
+                      </div>
+                    </div>
+
+                    <div class="sb-event-stream">
+                      <div class="stream-row">
+                        <span class="stream-dot green"></span>
+                        <span class="stream-title">Demo UI Query Optimization Active</span>
+                        <span class="stream-time">0.4s ago</span>
+                      </div>
+                      <div class="stream-row">
+                        <span class="stream-dot blue"></span>
+                        <span class="stream-title">Responsive Component Hierarchy Verified</span>
+                        <span class="stream-time">1.2s ago</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-content-side">
+              <div class="concept-meta-badge">INDEPENDENT DEMO CONCEPT · AI &amp; TELEMETRY</div>
+              <h3>Pulse Analytics</h3>
+              <p class="showcase-desc">
+                An analytics and business intelligence platform concept engineered for SaaS teams and executive leadership. Features modular KPI widgets, sub-second data streaming curves, and dense responsive tables.
+              </p>
+              <div class="showcase-specs">
+                <div class="spec-row">
+                  <b>Category:</b>
+                  <span>Business Intelligence &amp; Data Telemetry</span>
+                </div>
+                <div class="spec-row">
+                  <b>Architecture:</b>
+                  <span>Modular CSS Grid, SVG vector graphs &amp; scalable components</span>
+                </div>
+              </div>
+              <div class="showcase-tags">
+                <span>React Architecture</span>
+                <span>Data Visualization</span>
+                <span>CSS Grid Systems</span>
+                <span>Dark Mode System</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Concept 2: Forma Studio (Editorial Luxury Commerce) -->
+          <article class="showcase-card showcase-forma">
+            <div class="showcase-visual-side forma-visual-container">
+              <div class="forma-editorial-frame">
+                <div class="forma-nav-row">
+                  <b>FORMA STUDIO</b>
+                  <span class="forma-nav-links"><span>Objects</span><span>Editorial</span><span>Cart (1)</span></span>
+                </div>
+
+                <div class="forma-hero-layout">
+                  <div class="forma-left-col">
+                    <small>SERIES 04 · STONED EARTH</small>
+                    <h4>Quiet Forms.<br>Tactile Living.</h4>
+                    <p>Objects shaped by architectural balance and organic earthenware textures.</p>
+                    <div class="forma-cta-row">
+                      <span class="btn-forma-primary">Explore Series ↗</span>
+                      <span class="forma-price-tag">$280 USD</span>
+                    </div>
+                  </div>
+
+                  <div class="forma-right-col">
+                    <div class="sculpture-composition">
+                      <!-- High-Fidelity SVG Ceramic Art Vector -->
+                      <svg class="forma-vessel-svg" viewBox="0 0 160 200" width="100%" height="100%">
+                        <defs>
+                          <linearGradient id="vesselBodyGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+                            <stop offset="0%" stop-color="#ebe3d7"/>
+                            <stop offset="35%" stop-color="#dfd2c0"/>
+                            <stop offset="70%" stop-color="#bba68d"/>
+                            <stop offset="100%" stop-color="#7a654f"/>
+                          </linearGradient>
+                          <linearGradient id="podiumGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#f0ebe1"/>
+                            <stop offset="100%" stop-color="#d6cebf"/>
+                          </linearGradient>
+                          <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+                            <feOffset dx="0" dy="8" result="offsetblur"/>
+                            <feComponentTransfer>
+                              <feFuncA type="linear" slope="0.15"/>
+                            </feComponentTransfer>
+                            <feMerge>
+                              <feMergeNode/>
+                              <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                          </filter>
+                        </defs>
+                        <!-- Podium Base -->
+                        <polygon points="20,175 140,175 125,190 35,190" fill="url(#podiumGrad)" filter="url(#softShadow)"/>
+                        <!-- Cast Shadow -->
+                        <ellipse cx="80" cy="174" rx="45" ry="7" fill="rgba(60,45,30,0.18)"/>
+                        <!-- Ceramic Vessel Body -->
+                        <path d="M 68,30 C 68,22 92,22 92,30 L 90,62 C 122,85 130,132 120,166 C 114,172 46,172 40,166 C 30,132 38,85 70,62 Z" fill="url(#vesselBodyGrad)"/>
+                        <!-- Vessel Rim -->
+                        <ellipse cx="80" cy="30" rx="12" ry="3.5" fill="#ab9882"/>
+                        <ellipse cx="80" cy="30" rx="9" ry="2" fill="#4d3c2c"/>
+                        <!-- Subtle Specular Reflection Curve -->
+                        <path d="M 60,75 C 50,105 52,140 62,160" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-content-side">
+              <div class="concept-meta-badge">INDEPENDENT DEMO CONCEPT · EDITORIAL COMMERCE</div>
+              <h3>Forma Studio</h3>
+              <p class="showcase-desc">
+                An editorial e-commerce storefront concept crafted for luxury lifestyle and design brands. Emphasizes visual pacing, generous negative space, tactile imagery presentation, and friction-free customer browsing journeys.
+              </p>
+              <div class="showcase-specs">
+                <div class="spec-row">
+                  <b>Category:</b>
+                  <span>Luxury Lifestyle &amp; Product-Led Commerce</span>
+                </div>
+                <div class="spec-row">
+                  <b>Architecture:</b>
+                  <span>Typographic hierarchy, responsive pacing, and clean CSS styling</span>
+                </div>
+              </div>
+              <div class="showcase-tags">
+                <span>Editorial Design</span>
+                <span>Conversion UX</span>
+                <span>Responsive Layout</span>
+                <span>Visual Hierarchy</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Concept 3: Orbit Workspace (SaaS Collaboration Platform) -->
+          <article class="showcase-card showcase-orbit">
+            <div class="showcase-visual-side orbit-visual-container">
+              <div class="orbit-app-window">
+                <div class="orbit-top-bar">
+                  <span class="orbit-title">Orbit Workspace (Demo Concept)</span>
+                  <span class="orbit-tag-pill">Async Collaboration</span>
+                </div>
+
+                <div class="orbit-workspace-view">
+                  <div class="orbit-hero-banner">
+                    <small>ASYNC WORKSPACE</small>
+                    <h4>Interactive Collaboration &amp; Workflow Interface.</h4>
+                    <span class="orbit-action-btn">Explore Workspace UI ↗</span>
+                  </div>
+
+                  <div class="orbit-kanban-board">
+                    <div class="kanban-col">
+                      <div class="col-head">IN PROGRESS <span>2</span></div>
+                      <div class="kanban-card">
+                        <b>Design System v2.4</b>
+                        <small>Component tokens &amp; layout spec</small>
+                        <span class="card-status status-blue">Dev Review</span>
+                      </div>
+                    </div>
+                    <div class="kanban-col">
+                      <div class="col-head">DEPLOYED <span>3</span></div>
+                      <div class="kanban-card">
+                        <b>AI Agent Pipeline</b>
+                        <small>Telemetry gateway verified</small>
+                        <span class="card-status status-green">Simulated Prod</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-content-side">
+              <div class="concept-meta-badge">INDEPENDENT DEMO CONCEPT · B2B SAAS PLATFORM</div>
+              <h3>Orbit Workspace</h3>
+              <p class="showcase-desc">
+                A conversion-engineered SaaS product interface created for a modern collaboration platform. Built with persuasive feature hierarchy, interactive task management previews, and streamlined onboarding flows.
+              </p>
+              <div class="showcase-specs">
+                <div class="spec-row">
+                  <b>Category:</b>
+                  <span>B2B SaaS &amp; Workflow Productivity</span>
+                </div>
+                <div class="spec-row">
+                  <b>Architecture:</b>
+                  <span>SaaS conversion principles, micro-interactions, and component systems</span>
+                </div>
+              </div>
+              <div class="showcase-tags">
+                <span>SaaS Landing Page</span>
+                <span>Conversion Optimization</span>
+                <span>Micro-Interactions</span>
+                <span>Design Systems</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Strict Transparency Disclaimer (No fake clients or fabricated results) -->
+        <div class="transparency-box">
+          <div class="transparency-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <p>
+            <strong>Demonstration Notice:</strong> Pulse Analytics, Forma Studio, and Orbit Workspace are independent demonstration concepts created by AS Tech Studio to showcase UI/UX craftsmanship, component architecture, and responsive web performance. They are not client commissions or claims of commercial results.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <p>
-        Explore concept projects demonstrating dashboard layouts,
-        storefront experiences and product landing pages.
-      </p>
-    </div>
+    <!-- Product Development Process: End-to-End Lifecycle Pipeline -->
+    <section class="section process-section" id="process">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="kicker">END-TO-END METHODOLOGY</span>
+          <h2 class="title">Our Product Engineering &amp; Delivery Lifecycle</h2>
+          <p class="subtitle">
+            A systematic 5-stage engineering lifecycle designed to minimize technical risk, maintain high development velocity, and ensure production reliability.
+          </p>
+        </div>
 
-    <div class="projects">
-      <article class="project wide">
-        <div class="preview dashboard">
-          <aside>N.<hr>▦<hr>◷<hr>◈</aside>
+        <div class="workflow-pipeline">
+          <div class="pipeline-track" aria-hidden="true"></div>
 
-          <div class="dash">
-            <small>OVERVIEW</small>
+          <!-- Stage 01 -->
+          <div class="workflow-step">
+            <div class="step-badge">
+              <span class="step-num">01</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-phase">STAGE 01</span>
+                <span class="step-tag">STRATEGY</span>
+              </div>
+              <h3>Idea Validation &amp; Architecture</h3>
+              <p>
+                We collaborate to clarify product requirements, target market demographics (India, USA, Dubai), user journeys, and technical feasibility before coding.
+              </p>
+              <div class="step-output">
+                <span class="output-label">DELIVERABLE:</span>
+                <span>Product Architecture Blueprint</span>
+              </div>
+            </div>
+          </div>
 
-            <div class="metrics">
+          <!-- Stage 02 -->
+          <div class="workflow-step">
+            <div class="step-badge">
+              <span class="step-num">02</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-phase">STAGE 02</span>
+                <span class="step-tag">DESIGN</span>
+              </div>
+              <h3>UI/UX &amp; Design Systems</h3>
+              <p>
+                We design intuitive interfaces, spatial layout rhythms, typography hierarchies, and modular component systems tailored to elevate brand perception.
+              </p>
+              <div class="step-output">
+                <span class="output-label">DELIVERABLE:</span>
+                <span>Interactive Prototypes &amp; UI Tokens</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 03 -->
+          <div class="workflow-step">
+            <div class="step-badge">
+              <span class="step-num">03</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-phase">STAGE 03</span>
+                <span class="step-tag">BUILD</span>
+              </div>
+              <h3>Full-Stack &amp; AI Engineering</h3>
+              <p>
+                We develop clean, maintainable codebases across responsive frontends, server-side APIs, database schemas, and custom AI agent workflows.
+              </p>
+              <div class="step-output">
+                <span class="output-label">DELIVERABLE:</span>
+                <span>Production-Ready Codebase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 04 -->
+          <div class="workflow-step">
+            <div class="step-badge">
+              <span class="step-num">04</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-phase">STAGE 04</span>
+                <span class="step-tag">QA &amp; SECURITY</span>
+              </div>
+              <h3>Testing &amp; Performance Audit</h3>
+              <p>
+                Rigorous cross-browser verification, accessibility checks, automated unit tests, OWASP security hygiene, and sub-second Core Web Vitals optimization.
+              </p>
+              <div class="step-output">
+                <span class="output-label">DELIVERABLE:</span>
+                <span>Verified Quality &amp; Security Report</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 05 -->
+          <div class="workflow-step">
+            <div class="step-badge">
+              <span class="step-num">05</span>
+            </div>
+            <div class="step-card">
+              <div class="step-header">
+                <span class="step-phase">STAGE 05</span>
+                <span class="step-tag">SCALE</span>
+              </div>
+              <h3>Deployment, Scale &amp; Support</h3>
+              <p>
+                Seamless zero-downtime deployment, automated CI/CD monitoring, regular performance reviews, and dedicated ongoing technical consulting.
+              </p>
+              <div class="step-output">
+                <span class="output-label">DELIVERABLE:</span>
+                <span>Global Production Launch &amp; Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies & Engineering Stack Matrix -->
+    <section class="section tech-section" id="tech">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="kicker">ENGINEERING CAPABILITIES</span>
+          <h2 class="title">Modern, Production-Grade Technologies</h2>
+          <p class="subtitle">
+            We architect solutions on proven, industry-standard technologies that provide long-term reliability, accessibility, and frictionless maintenance.
+          </p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-head">
+              <span class="tech-badge">UI / WEB</span>
+              <b>Frontend Engineering</b>
+            </div>
+            <p>HTML5, Modern CSS Grid &amp; Flexbox, ES6+ JavaScript, React.js ecosystem, component-driven design systems, and responsive layouts.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-head">
+              <span class="tech-badge">MOBILE</span>
+              <b>Mobile Applications</b>
+            </div>
+            <p>Cross-platform &amp; native mobile architectures (iOS, Android, React Native, Flutter), offline data stores, and biometric hardware auth.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-head">
+              <span class="tech-badge">AI / DATA</span>
+              <b>AI &amp; Neural Workflows</b>
+            </div>
+            <p>LLM API integrations (OpenAI, Anthropic, Gemini), vector embeddings, LangChain/LlamaIndex pipelines, automated agent loops, and analytics telemetry.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-head">
+              <span class="tech-badge">BACKEND</span>
+              <b>APIs &amp; Microservices</b>
+            </div>
+            <p>Node.js, Express, Python FastAPI, RESTful data contracts, GraphQL schemas, PostgreSQL, MongoDB, Redis caching, and robust authentication.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-head">
+              <span class="tech-badge">CLOUD</span>
+              <b>Cloud &amp; DevOps</b>
+            </div>
+            <p>Cloudflare Edge, AWS services, Vercel deployments, Docker containerization, automated GitHub Actions CI/CD pipelines, and SSL/TLS hygiene.</p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-head">
+              <span class="tech-badge">QUALITY</span>
+              <b>QA &amp; Optimization</b>
+            </div>
+            <p>Lighthouse Core Web Vitals optimization (targeting 95+), WCAG accessibility compliance, OWASP security best practices, and cross-browser audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section: Engineering Craft & Philosophy -->
+    <section class="section about-section" id="about">
+      <div class="wrap about-grid">
+        <div class="about-content-col">
+          <span class="kicker">STUDIO PHILOSOPHY</span>
+          <h2 class="title">Engineering With Architectural Precision</h2>
+          <p class="about-lead">
+            AS Tech Studio was founded with a straightforward philosophy: great digital products are built at the intersection of aesthetic distinction, rigorous engineering, and measurable business purpose.
+          </p>
+
+          <p class="about-body">
+            We reject the idea that software should rely on fragile templates, bloated plugins, or generic drag-and-drop tools. We approach every digital product with architectural clarity—combining clean semantic code, modern typography, responsive precision, and search-optimized structures.
+          </p>
+
+          <p class="about-body">
+            Whether your business requires a high-authority corporate website to capture international accounts, an AI-powered telemetry dashboard, or a cross-platform mobile application, we bring technical rigor, transparent milestones, and clear direct communication to every stage.
+          </p>
+
+          <div class="about-pillars-grid">
+            <div class="pillar-item">
+              <span class="pillar-icon">✦</span>
               <div>
-                <small>Total revenue</small>
-                <b>$24,680</b>
-                <em>↗ 12.8%</em>
+                <b>Founder-Led Engineering</b>
+                <small>Direct access to senior engineering leadership with zero agency bureaucracy or outsourced layers.</small>
               </div>
-
+            </div>
+            <div class="pillar-item">
+              <span class="pillar-icon">✦</span>
               <div>
-                <small>Active users</small>
-                <b>8,420</b>
-                <em>↗ 8.2%</em>
-              </div>
-            </div>
-
-            <div class="chart">
-              <b>Performance</b>
-              <div class="bars">
-                <i></i><i></i><i></i><i></i>
-                <i></i><i></i><i></i><i></i>
+                <b>Global Timezone Agility</b>
+                <small>Seamless communication with regular milestone updates aligned to IST, EST, and GST hours.</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="projectbody">
-          <small class="type">DASHBOARD CONCEPT</small>
-          <h3>Pulse Analytics</h3>
-          <p>
-            A dashboard concept demonstrating KPI cards, reporting layouts
-            and data visualisation.
-          </p>
-
-          <div class="tags">
-            <span>Dashboard UI</span>
-            <span>Data visualisation</span>
-            <span>Responsive concept</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="preview shop">
-          <div class="shopnav">
-            <b>FORMA<span>.</span></b>
-            <small>Objects for everyday</small>
-            <small>Bag (0)</small>
-          </div>
-
-          <div class="shopcontent">
-            <div>
-              <small>THE EVERYDAY EDIT</small>
-              <h3>Simple things.<br>Better living.</h3>
-              <span class="darkbtn">Explore collection ↗</span>
+        <!-- Studio Engineering Blueprint Stack Visual -->
+        <div class="about-visual-col">
+          <div class="studio-stack-card">
+            <div class="stack-card-header">
+              <span>STUDIO DEVELOPMENT STANDARDS</span>
+              <span class="stack-tag">CORE APPROACH</span>
             </div>
 
-            <div class="vase"><i></i></div>
+            <div class="stack-layers-list">
+              <div class="layer-box layer-1">
+                <div class="l-num">01</div>
+                <div class="l-desc">
+                  <strong>Strategic Architecture &amp; Scoping</strong>
+                  <small>Business objectives, user flows &amp; technical blueprint</small>
+                </div>
+              </div>
+
+              <div class="layer-box layer-2">
+                <div class="l-num">02</div>
+                <div class="l-desc">
+                  <strong>UI/UX Systems &amp; Visual Hierarchy</strong>
+                  <small>Typographic pacing, component tokens &amp; accessible interfaces</small>
+                </div>
+              </div>
+
+              <div class="layer-box layer-3">
+                <div class="l-num">03</div>
+                <div class="l-desc">
+                  <strong>Clean-Code &amp; AI Integration</strong>
+                  <small>Modular frontend/backend logic &amp; API orchestration</small>
+                </div>
+              </div>
+
+              <div class="layer-box layer-4">
+                <div class="l-num">04</div>
+                <div class="l-desc">
+                  <strong>Testing, Compatibility &amp; Polish</strong>
+                  <small>Cross-device testing, accessible contrast, and clean code conventions</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack-card-footer">
+              <span class="status-indicator"></span>
+              <span>Practical software engineering focused on human clarity, reliability, and business utility.</span>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="projectbody">
-          <small class="type">STOREFRONT CONCEPT</small>
-          <h3>Forma Studio</h3>
-          <p>
-            A product storefront concept focused on clean layouts and
-            a straightforward shopping experience.
-          </p>
+    <!-- Quality, Security & Ongoing Support Section -->
+    <section class="section support-section">
+      <div class="wrap">
+        <div class="support-banner">
+          <div class="support-header-center">
+            <span class="kicker kicker-light">SECURITY &amp; RELIABILITY</span>
+            <h2 class="title title-light">Our Commitment to Quality, Security &amp; Scalability</h2>
+            <p class="subtitle subtitle-light">
+              We design every solution with security-conscious practices, comprehensive testing, and clear documentation to support your business through every stage of growth.
+            </p>
+          </div>
 
-          <div class="tags">
-            <span>Web design</span>
-            <span>E-commerce concept</span>
+          <div class="support-pillars-grid">
+            <div class="support-pillar">
+              <div class="sup-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>Security-Conscious</h4>
+              <p>Input validation, sanitized data handling, privacy-first static forms, and clean code boundaries.</p>
+            </div>
+            <div class="support-pillar">
+              <div class="sup-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h4>Performance-Focused</h4>
+              <p>Lightweight semantic markup, clean CSS, and optimized assets built for fast loading and smooth responsiveness.</p>
+            </div>
+            <div class="support-pillar">
+              <div class="sup-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h4>Maintainable Code</h4>
+              <p>Modular component architecture, readable code, and documented structures so your team can maintain and grow the codebase.</p>
+            </div>
+            <div class="support-pillar">
+              <div class="sup-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>Timezone Alignment</h4>
+              <p>Clear asynchronous updates and scheduled touchpoints aligned to India (IST), US (EST), and Dubai (GST) hours.</p>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="project">
-        <div class="preview launch">
-          <small>LESS BUSY. MORE BRILLIANT.</small>
-          <h3>Make room for<br>your next big idea.</h3>
-          <span class="darkbtn">Get started ↗</span>
-          <div class="stars">✳　✦　✳</div>
-        </div>
+    <!-- Project Consultation & Enhanced Contact Terminal -->
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-terminal-shell">
+          <div class="terminal-left-col">
+            <span class="terminal-kicker">START A CONVERSATION</span>
+            <h2 class="terminal-title">Let’s Build Something <span class="gradient-text">Exceptional.</span></h2>
+            <p class="terminal-lead">
+              Have an upcoming web project, mobile app, AI dashboard, or custom software concept? Share your project details below and we will get back to you with an initial scope, technical roadmap, and milestone schedule.
+            </p>
 
-        <div class="projectbody">
-          <small class="type">LANDING PAGE CONCEPT</small>
-          <h3>Orbit Workspace</h3>
-          <p>
-            A fictional product landing page concept built around
-            clear messaging and a focused call to action.
-          </p>
+            <div class="terminal-direct-details">
+              <div class="detail-block">
+                <small>DIRECT INQUIRY CHANNEL</small>
+                <a class="terminal-email-link" href="mailto:anshumansuthar.web@gmail.com">
+                  <span>anshumansuthar.web@gmail.com</span>
+                  <span class="email-arr">↗</span>
+                </a>
+              </div>
 
-          <div class="tags">
-            <span>Landing page</span>
-            <span>Responsive concept</span>
+              <div class="detail-block">
+                <small>STUDIO LOCATION &amp; MARKETS</small>
+                <p>Based in India · Partnering with businesses across India, USA, Dubai, UK, and worldwide.</p>
+              </div>
+
+              <div class="detail-block">
+                <small>TIMEZONE COMPATIBILITY</small>
+                <p>IST (India, UTC+5:30) · EST (US East, UTC-5) · GST (Dubai, UTC+4)</p>
+              </div>
+
+              <div class="detail-block">
+                <small>RESPONSE COMMITMENT</small>
+                <p class="response-note">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span>Initial enquiry response within 1 business day</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="terminal-right-col">
+            <div class="form-title-row">
+              <span>PROJECT INQUIRY FORM</span>
+              <span class="secure-tag">DIRECT &amp; CONFIDENTIAL</span>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-grid-row">
+                <div class="form-group">
+                  <label for="clientName">Your Name / Company <span class="req">*</span></label>
+                  <input id="clientName" name="clientName" type="text" required placeholder="e.g. Alex Morgan or TechStudio Co." autocomplete="name">
+                  <span class="field-error" id="nameError" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="clientEmail">Your Business Email <span class="req">*</span></label>
+                  <input id="clientEmail" name="clientEmail" type="email" required placeholder="alex@company.com" autocomplete="email">
+                  <span class="field-error" id="emailError" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-grid-row">
+                <div class="form-group">
+                  <label for="projectType">Service Category <span class="req">*</span></label>
+                  <select id="projectType" name="projectType" required>
+                    <option value="" disabled selected>Select primary service</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Mobile App Development">Mobile App Development</option>
+                    <option value="AI &amp; Automation Solutions">AI &amp; Automation Solutions</option>
+                    <option value="SaaS &amp; Custom Software">SaaS &amp; Custom Software</option>
+                    <option value="Backend, Cloud &amp; DevOps">Backend, Cloud &amp; DevOps</option>
+                    <option value="UI/UX, QA &amp; Ongoing Support">UI/UX, QA &amp; Ongoing Support</option>
+                    <option value="Full Product Lifecycle Engineering">Full Product Lifecycle Engineering</option>
+                  </select>
+                  <span class="field-error" id="typeError" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="platform">Target Platform <span class="req">*</span></label>
+                  <select id="platform" name="platform" required>
+                    <option value="" disabled selected>Select target platform</option>
+                    <option value="Web Browser (Responsive Desktop &amp; Mobile)">Web Browser (Desktop &amp; Mobile)</option>
+                    <option value="Mobile App (iOS &amp; Android)">Mobile App (iOS &amp; Android)</option>
+                    <option value="Cross-Platform (Web &amp; Mobile)">Cross-Platform (Web &amp; Mobile)</option>
+                    <option value="Cloud / API / Backend System">Cloud / API / Backend System</option>
+                    <option value="AI Agent / Automation Pipeline">AI Agent / Automation Pipeline</option>
+                    <option value="Custom Multi-Platform System">Custom Multi-Platform System</option>
+                  </select>
+                  <span class="field-error" id="platformError" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Approximate Budget Range <span class="req">*</span></label>
+                <select id="budget" name="budget" required>
+                  <option value="" disabled selected>Select approximate investment</option>
+                  <option value="Under $2,500 / ₹2L (Early Scope / MVP)">Under $2,500 / ₹2L (Early Scope / MVP)</option>
+                  <option value="$2,500 - $5,000 / ₹2L - ₹4L (Standard Build)">$2,500 - $5,000 / ₹2L - ₹4L (Standard Build)</option>
+                  <option value="$5,000 - $10,000 / ₹4L - ₹8L (Advanced Platform)">$5,000 - $10,000 / ₹4L - ₹8L (Advanced Platform)</option>
+                  <option value="$10,000+ / ₹8L+ (Enterprise / Full Product)">$10,000+ / ₹8L+ (Enterprise / Full Product)</option>
+                  <option value="Flexible / Needs Consultation">Flexible / Needs Consultation</option>
+                </select>
+                <span class="field-error" id="budgetError" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="details">Project Goals, Scope &amp; Timeline <span class="req">*</span></label>
+                <textarea id="details" name="details" rows="4" required placeholder="Describe your product vision, required features, desired timeline, or any reference websites..."></textarea>
+                <span class="field-error" id="detailsError" aria-live="polite"></span>
+              </div>
+
+              <button class="btn btn-primary btn-block" type="submit" id="submitBtn">
+                <span>Send Project Inquiry</span>
+                <span class="btn-icon">↗</span>
+              </button>
+
+              <div class="static-notice-card">
+                <span class="notice-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <p>
+                  <strong>Static Form Privacy Notice:</strong> Submitting this form prepares an email draft and opens your device's email application (Gmail, Apple Mail, Outlook) using the secure mailto protocol. No personal information is stored on a server.
+                </p>
+              </div>
+
+              <div id="status" class="status-box" role="status" aria-live="polite"></div>
+            </form>
           </div>
         </div>
-      </article>
-    </div>
-
-    <p class="disclaimer">
-      ⓘ Portfolio concepts are demonstrations of design and development ideas,
-      not client commissions or verified commercial results.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="wrap section">
-      <div class="sectionhead">
-        <div>
-          <p class="eyebrow">WHAT WE CAN BUILD</p>
-          <h2>
-            Digital solutions<br>
-            <span class="gradient">for growing businesses.</span>
-          </h2>
-        </div>
-
-        <p>
-          Flexible web development services for businesses, founders
-          and teams in India and international markets.
-        </p>
       </div>
+    </section>
+  </main>
 
-      <div class="servicegrid">
-        <article>
-          <span>01</span><i class="pinkbg">↗</i>
-          <h3>Business websites</h3>
-          <p>
-            Professional websites that explain your services, build trust
-            and help customers contact you.
-          </p>
-          <small>Business · Company · Portfolio</small>
-        </article>
-
-        <article>
-          <span>02</span><i class="yellowbg">✳</i>
-          <h3>Landing pages</h3>
-          <p>
-            Focused pages for product launches, marketing campaigns
-            and service enquiries.
-          </p>
-          <small>Products · Campaigns · Leads</small>
-        </article>
-
-        <article>
-          <span>03</span><i class="bluebg">⌘</i>
-          <h3>AI dashboards</h3>
-          <p>
-            Dashboard interfaces that organise information and present
-            useful metrics clearly.
-          </p>
-          <small>Analytics · Data · UI</small>
-        </article>
-
-        <article>
-          <span>04</span><i class="purplebg">◈</i>
-          <h3>Workflow automation</h3>
-          <p>
-            Explore ways to reduce repetitive tasks and connect business
-            workflows using suitable tools.
-          </p>
-          <small>Workflows · Integrations · Productivity</small>
-        </article>
-
-        <article>
-          <span>05</span><i class="greenbg">▥</i>
-          <h3>Web apps &amp; redesigns</h3>
-          <p>
-            Modernise existing websites or develop web application
-            interfaces around your requirements.
-          </p>
-          <small>React · UI improvements · Web apps</small>
-        </article>
-
-        <article class="servicecall">
-          <i>✦</i>
-          <h3>Have another idea?</h3>
-          <p>
-            Tell us what you want to build. We can discuss the requirements
-            and define a practical first step.
-          </p>
-          <a href="#contact">Discuss your project ↗</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="wrap section about" id="about">
-    <div class="approach">
-      <div class="approachtop">
-        OUR APPROACH <span>✳</span>
-      </div>
-
-      <div>
-        <b>01</b>
-        <p>
-          <strong>Understand your goals</strong>
-          <small>Clarify the requirements and audience.</small>
-        </p>
-      </div>
-
-      <div>
-        <b>02</b>
-        <p>
-          <strong>Build with purpose</strong>
-          <small>Focus on clarity and usability.</small>
-        </p>
-      </div>
-
-      <div>
-        <b>03</b>
-        <p>
-          <strong>Test and refine</strong>
-          <small>Review details across screen sizes.</small>
-        </p>
-      </div>
-
-      <small class="approachfoot">
-        CLEAR COMMUNICATION. THOUGHTFUL EXECUTION.
-      </small>
-    </div>
-
-    <div>
-      <p class="eyebrow">ABOUT AS TECH STUDIO</p>
-      <h2>
-        Practical technology.<br>
-        <span class="gradient">Thoughtful execution.</span>
-      </h2>
-
-      <p class="bodycopy">
-        AS Tech Studio is an independent digital services brand based in India,
-        focused on building modern websites and useful digital experiences
-        for businesses and individuals.
-      </p>
-
-      <p class="bodycopy">
-        Our approach combines clear communication, responsive design,
-        practical development tools and careful testing. Every project begins
-        with understanding the client's goals and requirements.
-      </p>
-
-      <div class="values">
-        <span>✦ Clear communication</span>
-        <span>✦ Responsive design</span>
-        <span>✦ Practical solutions</span>
-        <span>✦ Transparent scope</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECHNOLOGIES -->
-  <section class="wrap tech">
-    <div>
-      <p class="eyebrow">TOOLS &amp; TECHNOLOGIES</p>
-      <h2>
-        Tools chosen<br>
-        <span class="gradient">for the task.</span>
-      </h2>
-    </div>
-
-    <div class="techgrid">
-      <div>
-        <i class="pinkbg">5</i>
-        <b>HTML &amp; CSS</b>
-        <small>Structure and styling</small>
-      </div>
-
-      <div>
-        <i class="yellowbg">JS</i>
-        <b>JavaScript</b>
-        <small>Interactive experiences</small>
-      </div>
-
-      <div>
-        <i class="bluebg">✳</i>
-        <b>React</b>
-        <small>Component interfaces</small>
-      </div>
-
-      <div>
-        <i class="greenbg">N</i>
-        <b>Node.js</b>
-        <small>Server-side foundations</small>
-      </div>
-
-      <div>
-        <i class="purplebg">▤</i>
-        <b>Databases</b>
-        <small>Application data</small>
-      </div>
-
-      <div>
-        <i class="pinkbg">⌘</i>
-        <b>Git &amp; GitHub</b>
-        <small>Version control</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="wrap contactgrid">
-      <div>
-        <p class="eyebrow">LET’S DISCUSS YOUR PROJECT</p>
-        <h2>
-          Have an idea?<br>
-          <span class="gradient">Let’s build it.</span>
-        </h2>
-
-        <p class="bodycopy">
-          Share your project requirements, goals and preferred timeline.
-          Get in touch by email to discuss the next steps.
-        </p>
-
-        <a class="email" href="mailto:anshumansuthar.web@gmail.com">
-          anshumansuthar.web@gmail.com ↗
+  <!-- Deep Navy Luxury Agency Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-col-brand">
+        <a class="brand brand-light" href="#home">
+          <span class="logo">AS</span>
+          <div class="brand-text-group">
+            <span class="brand-text">AS Tech Studio<span class="dot">.</span></span>
+            <span class="brand-subline">Software &amp; AI Studio</span>
+          </div>
         </a>
-
-        <p class="location">
-          ● Based in India · Available for enquiries worldwide
+        <p class="footer-tagline">
+          Modern Websites. Intelligent Digital Solutions.
         </p>
+        <p class="footer-desc">
+          Full-service digital product engineering and AI solutions company based in India, partnering with ambitious founders, startups, and established enterprises across the USA, Dubai / UAE, India, and worldwide.
+        </p>
+        <div class="footer-timezones">
+          <span class="tz-chip">IST (UTC+5:30)</span>
+          <span class="tz-chip">EST (UTC-5)</span>
+          <span class="tz-chip">GST (UTC+4)</span>
+        </div>
       </div>
 
-      <div class="formcard">
-        <div class="formhead">
-          PROJECT ENQUIRY <span>✳</span>
+      <div class="footer-col-links">
+        <div class="footer-col">
+          <h4 class="footer-title">CAPABILITY SUITES</h4>
+          <ul class="footer-menu">
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">Mobile App Development</a></li>
+            <li><a href="#services">AI &amp; Automation</a></li>
+            <li><a href="#services">SaaS &amp; Custom Software</a></li>
+            <li><a href="#services">Backend, Cloud &amp; DevOps</a></li>
+            <li><a href="#services">UI/UX, QA &amp; Support</a></li>
+          </ul>
         </div>
 
-        <form id="contactForm">
-          <label for="clientName">Your name</label>
-          <input
-            id="clientName"
-            name="clientName"
-            type="text"
-            autocomplete="name"
-            maxlength="100"
-            required
-            placeholder="How should we address you?"
-          >
+        <div class="footer-col">
+          <h4 class="footer-title">DEMO SHOWCASES</h4>
+          <ul class="footer-menu">
+            <li><a href="#work">Pulse Analytics (BI Dashboard)</a></li>
+            <li><a href="#work">Forma Studio (Luxury Commerce)</a></li>
+            <li><a href="#work">Orbit Workspace (SaaS Collab)</a></li>
+            <li><a href="#process">5-Stage Product Lifecycle</a></li>
+            <li><a href="#tech">Technology Capabilities</a></li>
+            <li><a href="#about">Studio Philosophy</a></li>
+          </ul>
+        </div>
 
-          <label for="clientEmail">Your email</label>
-          <input
-            id="clientEmail"
-            name="clientEmail"
-            type="email"
-            autocomplete="email"
-            maxlength="254"
-            required
-            placeholder="you@company.com"
-          >
-
-          <label for="projectType">What do you need?</label>
-          <select id="projectType" name="projectType" required>
-            <option value="" disabled selected>Select a service</option>
-            <option value="Business website">Business website</option>
-            <option value="Landing page">Landing page</option>
-            <option value="AI dashboard">AI dashboard</option>
-            <option value="Workflow automation">Workflow automation</option>
-            <option value="Web application">Web application</option>
-            <option value="Website redesign">Website redesign</option>
-            <option value="Something else">Something else</option>
-          </select>
-
-          <label for="details">Project details</label>
-          <textarea
-            id="details"
-            name="details"
-            rows="3"
-            maxlength="5000"
-            required
-            placeholder="Tell us about your goals, scope and timeline..."
-          ></textarea>
-
-          <button class="btn" type="submit">Prepare email ↗</button>
-
-          <p class="formnote">
-            Submitting opens your email application with a prepared message.
-            This static website does not send or store form data on a server.
-          </p>
-
-          <p id="status" role="status" aria-live="polite"></p>
-        </form>
+        <div class="footer-col">
+          <h4 class="footer-title">STUDIO CONTACT</h4>
+          <ul class="footer-menu">
+            <li>
+              <a class="footer-email-link" href="mailto:anshumansuthar.web@gmail.com">
+                anshumansuthar.web@gmail.com
+              </a>
+            </li>
+            <li class="footer-info-text">India &amp; International Delivery</li>
+            <li class="footer-info-text">Response Time: Within 1 Business Day</li>
+            <li class="footer-info-text">Available for New Projects</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </section>
-</main>
 
-<!-- FOOTER -->
-<footer>
-  <a class="brand" href="#home" aria-label="AS Tech Studio home">
-    <span class="logo">AS</span> AS Tech Studio<span class="pink">.</span>
-  </a>
+    <div class="wrap footer-bottom">
+      <div class="bottom-legal">
+        <p>© <span id="year">2026</span> AS Tech Studio. All rights reserved.</p>
+        <p class="bottom-disclaimer">
+          Independent digital product engineering studio. Demo projects are original demonstration concepts engineered to illustrate product design and frontend architecture.
+        </p>
+      </div>
+      <div class="bottom-badge">
+        <span class="status-pulse-dot"></span>
+        <span>Studio Status: Available for New Projects</span>
+      </div>
+    </div>
+  </footer>
 
-  <p>Modern Websites. Intelligent Digital Solutions.</p>
-
-  <div>
-    © <span id="year"></span> AS Tech Studio ·
-    <a href="#home">Back to top ↑</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-```
