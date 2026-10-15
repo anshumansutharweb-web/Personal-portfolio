@@ -1,29 +1,48 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" content="AS Tech Studio builds modern websites, AI dashboards, landing pages and workflow automation solutions for businesses in India and worldwide.">
-  <meta name="theme-color" content="#101026">
+  <meta
+    name="description"
+    content="AS Tech Studio builds modern websites, AI dashboards, landing pages and workflow automation solutions for businesses in India and worldwide."
+  >
+  <meta name="theme-color" content="#0b1220">
 
-  <title>AS Tech Studio | Websites, AI Dashboards & Automation</title>
+  <meta name="robots" content="index, follow">
+
+  <title>AS Tech Studio | Websites, AI Dashboards &amp; Automation</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <header>
-  <a class="brand" href="#home">
+  <a class="brand" href="#home" aria-label="AS Tech Studio home">
     <span class="logo">AS</span> AS Tech Studio<span class="pink">.</span>
   </a>
 
-  <button id="toggle" aria-label="Toggle navigation">☰</button>
+  <button
+    id="toggle"
+    type="button"
+    aria-label="Toggle navigation"
+    aria-controls="nav"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
 
-  <nav id="nav">
+  <nav id="nav" aria-label="Main navigation">
     <a href="#work">Portfolio</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
@@ -32,44 +51,50 @@
 </header>
 
 <main>
-<section class="hero wrap" id="home">
-  <div>
-    <div class="availability"><i></i> OPEN TO PROJECT ENQUIRIES</div>
-
-    <p class="eyebrow">WEB DEVELOPMENT · AI SOLUTIONS · AUTOMATION</p>
-
-    <h1>
-      Modern websites.<br>
-      <span class="gradient">Intelligent digital solutions.</span>
-    </h1>
-
-    <p class="lead">
-      AS Tech Studio helps businesses turn ideas into modern websites,
-      interactive dashboards and practical automation solutions.
-      Clear communication, responsive experiences and solutions built around your goals.
-    </p>
-
-    <div class="actions">
-      <a class="btn" href="#contact">Discuss your project ↗</a>
-      <a class="textlink" href="#work">Explore demo projects ↓</a>
-    </div>
-
-    <p class="subnote">
-      Web development · AI-assisted solutions · Built for real business needs.
-    </p>
-  </div>
-
-  <div class="heroart">
-    <div class="orbit"></div>
-
-    <div class="code">
-      <div class="codetop">
-        <span>● <b>●</b> <i>●</i></span>
-        AS Tech Studio
-        <span>•••</span>
+  <!-- HERO -->
+  <section class="hero wrap" id="home">
+    <div>
+      <div class="availability">
+        <i></i> OPEN TO PROJECT ENQUIRIES
       </div>
 
-      <pre><span>01</span> <em>const</em> idea = <strong>'your business idea'</strong>;
+      <p class="eyebrow">
+        WEB DEVELOPMENT · AI SOLUTIONS · AUTOMATION
+      </p>
+
+      <h1>
+        Modern websites.<br>
+        <span class="gradient">Intelligent digital solutions.</span>
+      </h1>
+
+      <p class="lead">
+        AS Tech Studio helps businesses turn ideas into modern websites,
+        interactive dashboards and practical automation solutions.
+        Clear communication, responsive experiences and solutions built
+        around your goals.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#contact">Discuss your project ↗</a>
+        <a class="textlink" href="#work">Explore demo projects ↓</a>
+      </div>
+
+      <p class="subnote">
+        Web development · AI-assisted solutions · Built for real business needs.
+      </p>
+    </div>
+
+    <div class="heroart">
+      <div class="orbit"></div>
+
+      <div class="code">
+        <div class="codetop">
+          <span>● <b>●</b> <i>●</i></span>
+          AS Tech Studio
+          <span>•••</span>
+        </div>
+
+        <pre><span>01</span> <em>const</em> idea = <strong>'your business idea'</strong>;
 
 <span>02</span> <em>function</em> <a>buildSolution</a>() {
 
@@ -77,316 +102,456 @@
 
 <span>04</span> }</pre>
 
-      <div class="codefoot">
-        ● Ready to build
-        <span>WEB · AI · AUTOMATION</span>
+        <div class="codefoot">
+          ● Ready to build
+          <span>WEB · AI · AUTOMATION</span>
+        </div>
+      </div>
+
+      <div class="float top">
+        ✳
+        <span>
+          <b>Modern UI</b>
+          <small>Designed with purpose</small>
+        </span>
+      </div>
+
+      <div class="float bottom">
+        ↗
+        <span>
+          <b>Responsive</b>
+          <small>Every screen matters</small>
+        </span>
       </div>
     </div>
+  </section>
 
-    <div class="float top">
-      ✳ <span><b>Modern UI</b><small>Designed with purpose</small></span>
-    </div>
-
-    <div class="float bottom">
-      ↗ <span><b>Responsive</b><small>Every screen matters</small></span>
-    </div>
-  </div>
-</section>
-
-<div class="toolstrip wrap">
-  <span>OUR TOOLKIT</span>
-  <b>HTML5</b>
-  <b>CSS3</b>
-  <b>JavaScript</b>
-  <b>React</b>
-  <b>Node.js</b>
-  <b>Git & GitHub</b>
-</div>
-
-<section class="wrap section" id="work">
-  <div class="sectionhead">
-    <div>
-      <p class="eyebrow">PORTFOLIO CONCEPTS</p>
-      <h2>Ideas brought to life.<br><span class="gradient">Built for what’s next.</span></h2>
-    </div>
-    <p>
-      Explore concept projects demonstrating dashboard layouts,
-      storefront experiences and product landing pages.
-    </p>
+  <!-- TOOLKIT -->
+  <div class="toolstrip wrap">
+    <span>OUR TOOLKIT</span>
+    <b>HTML5</b>
+    <b>CSS3</b>
+    <b>JavaScript</b>
+    <b>React</b>
+    <b>Node.js</b>
+    <b>Git &amp; GitHub</b>
   </div>
 
-  <div class="projects">
-    <article class="project wide">
-      <div class="preview dashboard">
-        <aside>N.<hr>▦<hr>◷<hr>◈</aside>
-        <div class="dash">
-          <small>OVERVIEW</small>
-          <div class="metrics">
-            <div>
-              <small>Total revenue</small>
-              <b>$24,680</b>
-              <em>↗ 12.8%</em>
-            </div>
-            <div>
-              <small>Active users</small>
-              <b>8,420</b>
-              <em>↗ 8.2%</em>
-            </div>
-          </div>
-          <div class="chart">
-            <b>Performance</b>
-            <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="projectbody">
-        <small class="type">DASHBOARD CONCEPT</small>
-        <h3>Pulse Analytics</h3>
-        <p>A dashboard concept demonstrating KPI cards, reporting layouts and data visualisation.</p>
-        <div class="tags">
-          <span>Dashboard UI</span>
-          <span>Data visualisation</span>
-          <span>Responsive concept</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="preview shop">
-        <div class="shopnav">
-          <b>FORMA<span>.</span></b>
-          <small>Objects for everyday</small>
-          <small>Bag (0)</small>
-        </div>
-        <div class="shopcontent">
-          <div>
-            <small>THE EVERYDAY EDIT</small>
-            <h3>Simple things.<br>Better living.</h3>
-            <span class="darkbtn">Explore collection ↗</span>
-          </div>
-          <div class="vase"><i></i></div>
-        </div>
-      </div>
-
-      <div class="projectbody">
-        <small class="type">STOREFRONT CONCEPT</small>
-        <h3>Forma Studio</h3>
-        <p>A product storefront concept focused on clean layouts and a straightforward shopping experience.</p>
-        <div class="tags">
-          <span>Web design</span>
-          <span>E-commerce concept</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div class="preview launch">
-        <small>LESS BUSY. MORE BRILLIANT.</small>
-        <h3>Make room for<br>your next big idea.</h3>
-        <span class="darkbtn">Get started ↗</span>
-        <div class="stars">✳　✦　✳</div>
-      </div>
-
-      <div class="projectbody">
-        <small class="type">LANDING PAGE CONCEPT</small>
-        <h3>Orbit Workspace</h3>
-        <p>A fictional product landing page concept built around clear messaging and a focused call to action.</p>
-        <div class="tags">
-          <span>Landing page</span>
-          <span>Responsive concept</span>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <p class="disclaimer">
-    ⓘ Portfolio concepts are demonstrations of design and development ideas,
-    not client commissions or verified commercial results.
-  </p>
-</section>
-
-<section class="services" id="services">
-  <div class="wrap section">
+  <!-- PORTFOLIO -->
+  <section class="wrap section" id="work">
     <div class="sectionhead">
       <div>
-        <p class="eyebrow">WHAT WE CAN BUILD</p>
-        <h2>Digital solutions<br><span class="gradient">for growing businesses.</span></h2>
+        <p class="eyebrow">PORTFOLIO CONCEPTS</p>
+        <h2>
+          Ideas brought to life.<br>
+          <span class="gradient">Built for what’s next.</span>
+        </h2>
       </div>
+
       <p>
-        Flexible web development services for businesses, founders
-        and teams in India and international markets.
+        Explore concept projects demonstrating dashboard layouts,
+        storefront experiences and product landing pages.
       </p>
     </div>
 
-    <div class="servicegrid">
-      <article>
-        <span>01</span><i class="pinkbg">↗</i>
-        <h3>Business websites</h3>
-        <p>Professional websites that explain your services, build trust and help customers contact you.</p>
-        <small>Business · Company · Portfolio</small>
+    <div class="projects">
+      <article class="project wide">
+        <div class="preview dashboard">
+          <aside>N.<hr>▦<hr>◷<hr>◈</aside>
+
+          <div class="dash">
+            <small>OVERVIEW</small>
+
+            <div class="metrics">
+              <div>
+                <small>Total revenue</small>
+                <b>$24,680</b>
+                <em>↗ 12.8%</em>
+              </div>
+
+              <div>
+                <small>Active users</small>
+                <b>8,420</b>
+                <em>↗ 8.2%</em>
+              </div>
+            </div>
+
+            <div class="chart">
+              <b>Performance</b>
+              <div class="bars">
+                <i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projectbody">
+          <small class="type">DASHBOARD CONCEPT</small>
+          <h3>Pulse Analytics</h3>
+          <p>
+            A dashboard concept demonstrating KPI cards, reporting layouts
+            and data visualisation.
+          </p>
+
+          <div class="tags">
+            <span>Dashboard UI</span>
+            <span>Data visualisation</span>
+            <span>Responsive concept</span>
+          </div>
+        </div>
       </article>
 
-      <article>
-        <span>02</span><i class="yellowbg">✳</i>
-        <h3>Landing pages</h3>
-        <p>Focused pages for product launches, marketing campaigns and service enquiries.</p>
-        <small>Products · Campaigns · Leads</small>
+      <article class="project">
+        <div class="preview shop">
+          <div class="shopnav">
+            <b>FORMA<span>.</span></b>
+            <small>Objects for everyday</small>
+            <small>Bag (0)</small>
+          </div>
+
+          <div class="shopcontent">
+            <div>
+              <small>THE EVERYDAY EDIT</small>
+              <h3>Simple things.<br>Better living.</h3>
+              <span class="darkbtn">Explore collection ↗</span>
+            </div>
+
+            <div class="vase"><i></i></div>
+          </div>
+        </div>
+
+        <div class="projectbody">
+          <small class="type">STOREFRONT CONCEPT</small>
+          <h3>Forma Studio</h3>
+          <p>
+            A product storefront concept focused on clean layouts and
+            a straightforward shopping experience.
+          </p>
+
+          <div class="tags">
+            <span>Web design</span>
+            <span>E-commerce concept</span>
+          </div>
+        </div>
       </article>
 
-      <article>
-        <span>03</span><i class="bluebg">⌘</i>
-        <h3>AI dashboards</h3>
-        <p>Dashboard interfaces that organise information and present useful metrics clearly.</p>
-        <small>Analytics · Data · UI</small>
-      </article>
+      <article class="project">
+        <div class="preview launch">
+          <small>LESS BUSY. MORE BRILLIANT.</small>
+          <h3>Make room for<br>your next big idea.</h3>
+          <span class="darkbtn">Get started ↗</span>
+          <div class="stars">✳　✦　✳</div>
+        </div>
 
-      <article>
-        <span>04</span><i class="purplebg">◈</i>
-        <h3>Workflow automation</h3>
-        <p>Explore ways to reduce repetitive tasks and connect business workflows using suitable tools.</p>
-        <small>Workflows · Integrations · Productivity</small>
-      </article>
+        <div class="projectbody">
+          <small class="type">LANDING PAGE CONCEPT</small>
+          <h3>Orbit Workspace</h3>
+          <p>
+            A fictional product landing page concept built around
+            clear messaging and a focused call to action.
+          </p>
 
-      <article>
-        <span>05</span><i class="greenbg">▥</i>
-        <h3>Web apps & redesigns</h3>
-        <p>Modernise existing websites or develop web application interfaces around your requirements.</p>
-        <small>React · UI improvements · Web apps</small>
-      </article>
-
-      <article class="servicecall">
-        <i>✦</i>
-        <h3>Have another idea?</h3>
-        <p>Tell us what you want to build. We can discuss the requirements and define a practical first step.</p>
-        <a href="#contact">Discuss your project ↗</a>
+          <div class="tags">
+            <span>Landing page</span>
+            <span>Responsive concept</span>
+          </div>
+        </div>
       </article>
     </div>
-  </div>
-</section>
 
-<section class="wrap section about" id="about">
-  <div class="approach">
-    <div class="approachtop">OUR APPROACH <span>✳</span></div>
-
-    <div>
-      <b>01</b>
-      <p><strong>Understand your goals</strong><small>Clarify the requirements and audience.</small></p>
-    </div>
-
-    <div>
-      <b>02</b>
-      <p><strong>Build with purpose</strong><small>Focus on clarity and usability.</small></p>
-    </div>
-
-    <div>
-      <b>03</b>
-      <p><strong>Test and refine</strong><small>Review details across screen sizes.</small></p>
-    </div>
-
-    <small class="approachfoot">CLEAR COMMUNICATION. THOUGHTFUL EXECUTION.</small>
-  </div>
-
-  <div>
-    <p class="eyebrow">ABOUT AS TECH STUDIO</p>
-    <h2>Practical technology.<br><span class="gradient">Thoughtful execution.</span></h2>
-
-    <p class="bodycopy">
-      AS Tech Studio is an independent digital services brand based in India,
-      focused on building modern websites and useful digital experiences
-      for businesses and individuals.
+    <p class="disclaimer">
+      ⓘ Portfolio concepts are demonstrations of design and development ideas,
+      not client commissions or verified commercial results.
     </p>
+  </section>
 
-    <p class="bodycopy">
-      Our approach combines clear communication, responsive design,
-      practical development tools and careful testing. Every project begins
-      with understanding the client's goals and requirements.
-    </p>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap section">
+      <div class="sectionhead">
+        <div>
+          <p class="eyebrow">WHAT WE CAN BUILD</p>
+          <h2>
+            Digital solutions<br>
+            <span class="gradient">for growing businesses.</span>
+          </h2>
+        </div>
 
-    <div class="values">
-      <span>✦ Clear communication</span>
-      <span>✦ Responsive design</span>
-      <span>✦ Practical solutions</span>
-      <span>✦ Transparent scope</span>
+        <p>
+          Flexible web development services for businesses, founders
+          and teams in India and international markets.
+        </p>
+      </div>
+
+      <div class="servicegrid">
+        <article>
+          <span>01</span><i class="pinkbg">↗</i>
+          <h3>Business websites</h3>
+          <p>
+            Professional websites that explain your services, build trust
+            and help customers contact you.
+          </p>
+          <small>Business · Company · Portfolio</small>
+        </article>
+
+        <article>
+          <span>02</span><i class="yellowbg">✳</i>
+          <h3>Landing pages</h3>
+          <p>
+            Focused pages for product launches, marketing campaigns
+            and service enquiries.
+          </p>
+          <small>Products · Campaigns · Leads</small>
+        </article>
+
+        <article>
+          <span>03</span><i class="bluebg">⌘</i>
+          <h3>AI dashboards</h3>
+          <p>
+            Dashboard interfaces that organise information and present
+            useful metrics clearly.
+          </p>
+          <small>Analytics · Data · UI</small>
+        </article>
+
+        <article>
+          <span>04</span><i class="purplebg">◈</i>
+          <h3>Workflow automation</h3>
+          <p>
+            Explore ways to reduce repetitive tasks and connect business
+            workflows using suitable tools.
+          </p>
+          <small>Workflows · Integrations · Productivity</small>
+        </article>
+
+        <article>
+          <span>05</span><i class="greenbg">▥</i>
+          <h3>Web apps &amp; redesigns</h3>
+          <p>
+            Modernise existing websites or develop web application
+            interfaces around your requirements.
+          </p>
+          <small>React · UI improvements · Web apps</small>
+        </article>
+
+        <article class="servicecall">
+          <i>✦</i>
+          <h3>Have another idea?</h3>
+          <p>
+            Tell us what you want to build. We can discuss the requirements
+            and define a practical first step.
+          </p>
+          <a href="#contact">Discuss your project ↗</a>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="wrap tech">
-  <div>
-    <p class="eyebrow">TOOLS & TECHNOLOGIES</p>
-    <h2>Tools chosen<br><span class="gradient">for the task.</span></h2>
-  </div>
+  <!-- ABOUT -->
+  <section class="wrap section about" id="about">
+    <div class="approach">
+      <div class="approachtop">
+        OUR APPROACH <span>✳</span>
+      </div>
 
-  <div class="techgrid">
-    <div><i class="pinkbg">5</i><b>HTML & CSS</b><small>Structure and styling</small></div>
-    <div><i class="yellowbg">JS</i><b>JavaScript</b><small>Interactive experiences</small></div>
-    <div><i class="bluebg">✳</i><b>React</b><small>Component interfaces</small></div>
-    <div><i class="greenbg">N</i><b>Node.js</b><small>Server-side foundations</small></div>
-    <div><i class="purplebg">▤</i><b>Databases</b><small>Application data</small></div>
-    <div><i class="pinkbg">⌘</i><b>Git & GitHub</b><small>Version control</small></div>
-  </div>
-</section>
+      <div>
+        <b>01</b>
+        <p>
+          <strong>Understand your goals</strong>
+          <small>Clarify the requirements and audience.</small>
+        </p>
+      </div>
 
-<section class="contact" id="contact">
-  <div class="wrap contactgrid">
+      <div>
+        <b>02</b>
+        <p>
+          <strong>Build with purpose</strong>
+          <small>Focus on clarity and usability.</small>
+        </p>
+      </div>
+
+      <div>
+        <b>03</b>
+        <p>
+          <strong>Test and refine</strong>
+          <small>Review details across screen sizes.</small>
+        </p>
+      </div>
+
+      <small class="approachfoot">
+        CLEAR COMMUNICATION. THOUGHTFUL EXECUTION.
+      </small>
+    </div>
+
     <div>
-      <p class="eyebrow">LET’S DISCUSS YOUR PROJECT</p>
-      <h2>Have an idea?<br><span class="gradient">Let’s build it.</span></h2>
+      <p class="eyebrow">ABOUT AS TECH STUDIO</p>
+      <h2>
+        Practical technology.<br>
+        <span class="gradient">Thoughtful execution.</span>
+      </h2>
 
       <p class="bodycopy">
-        Share your project requirements, goals and preferred timeline.
-        Get in touch by email to discuss the next steps.
+        AS Tech Studio is an independent digital services brand based in India,
+        focused on building modern websites and useful digital experiences
+        for businesses and individuals.
       </p>
 
-      <a class="email" href="mailto:anshumansuthar.web@gmail.com">
-        anshumansuthar.web@gmail.com ↗
-      </a>
+      <p class="bodycopy">
+        Our approach combines clear communication, responsive design,
+        practical development tools and careful testing. Every project begins
+        with understanding the client's goals and requirements.
+      </p>
 
-      <p class="location">● Based in India · Available for enquiries worldwide</p>
+      <div class="values">
+        <span>✦ Clear communication</span>
+        <span>✦ Responsive design</span>
+        <span>✦ Practical solutions</span>
+        <span>✦ Transparent scope</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES -->
+  <section class="wrap tech">
+    <div>
+      <p class="eyebrow">TOOLS &amp; TECHNOLOGIES</p>
+      <h2>
+        Tools chosen<br>
+        <span class="gradient">for the task.</span>
+      </h2>
     </div>
 
-    <div class="formcard">
-      <div class="formhead">PROJECT ENQUIRY <span>✳</span></div>
+    <div class="techgrid">
+      <div>
+        <i class="pinkbg">5</i>
+        <b>HTML &amp; CSS</b>
+        <small>Structure and styling</small>
+      </div>
 
-      <form id="contactForm">
-        <label for="clientName">Your name</label>
-        <input id="clientName" name="clientName" required placeholder="How should we address you?">
+      <div>
+        <i class="yellowbg">JS</i>
+        <b>JavaScript</b>
+        <small>Interactive experiences</small>
+      </div>
 
-        <label for="clientEmail">Your email</label>
-        <input id="clientEmail" name="clientEmail" type="email" required placeholder="you@company.com">
+      <div>
+        <i class="bluebg">✳</i>
+        <b>React</b>
+        <small>Component interfaces</small>
+      </div>
 
-        <label for="projectType">What do you need?</label>
-        <select id="projectType" name="projectType" required>
-          <option value="" disabled selected>Select a service</option>
-          <option>Business website</option>
-          <option>Landing page</option>
-          <option>AI dashboard</option>
-          <option>Workflow automation</option>
-          <option>Web application</option>
-          <option>Website redesign</option>
-          <option>Something else</option>
-        </select>
+      <div>
+        <i class="greenbg">N</i>
+        <b>Node.js</b>
+        <small>Server-side foundations</small>
+      </div>
 
-        <label for="details">Project details</label>
-        <textarea id="details" name="details" rows="3" required placeholder="Tell us about your goals, scope and timeline..."></textarea>
+      <div>
+        <i class="purplebg">▤</i>
+        <b>Databases</b>
+        <small>Application data</small>
+      </div>
 
-        <button class="btn" type="submit">Prepare email ↗</button>
+      <div>
+        <i class="pinkbg">⌘</i>
+        <b>Git &amp; GitHub</b>
+        <small>Version control</small>
+      </div>
+    </div>
+  </section>
 
-        <p class="formnote">
-          Submitting opens your email application with a prepared message.
-          This static website does not send or store form data on a server.
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contactgrid">
+      <div>
+        <p class="eyebrow">LET’S DISCUSS YOUR PROJECT</p>
+        <h2>
+          Have an idea?<br>
+          <span class="gradient">Let’s build it.</span>
+        </h2>
+
+        <p class="bodycopy">
+          Share your project requirements, goals and preferred timeline.
+          Get in touch by email to discuss the next steps.
         </p>
 
-        <p id="status" role="status"></p>
-      </form>
+        <a class="email" href="mailto:anshumansuthar.web@gmail.com">
+          anshumansuthar.web@gmail.com ↗
+        </a>
+
+        <p class="location">
+          ● Based in India · Available for enquiries worldwide
+        </p>
+      </div>
+
+      <div class="formcard">
+        <div class="formhead">
+          PROJECT ENQUIRY <span>✳</span>
+        </div>
+
+        <form id="contactForm">
+          <label for="clientName">Your name</label>
+          <input
+            id="clientName"
+            name="clientName"
+            type="text"
+            autocomplete="name"
+            maxlength="100"
+            required
+            placeholder="How should we address you?"
+          >
+
+          <label for="clientEmail">Your email</label>
+          <input
+            id="clientEmail"
+            name="clientEmail"
+            type="email"
+            autocomplete="email"
+            maxlength="254"
+            required
+            placeholder="you@company.com"
+          >
+
+          <label for="projectType">What do you need?</label>
+          <select id="projectType" name="projectType" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="Business website">Business website</option>
+            <option value="Landing page">Landing page</option>
+            <option value="AI dashboard">AI dashboard</option>
+            <option value="Workflow automation">Workflow automation</option>
+            <option value="Web application">Web application</option>
+            <option value="Website redesign">Website redesign</option>
+            <option value="Something else">Something else</option>
+          </select>
+
+          <label for="details">Project details</label>
+          <textarea
+            id="details"
+            name="details"
+            rows="3"
+            maxlength="5000"
+            required
+            placeholder="Tell us about your goals, scope and timeline..."
+          ></textarea>
+
+          <button class="btn" type="submit">Prepare email ↗</button>
+
+          <p class="formnote">
+            Submitting opens your email application with a prepared message.
+            This static website does not send or store form data on a server.
+          </p>
+
+          <p id="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <a class="brand" href="#home">
+  <a class="brand" href="#home" aria-label="AS Tech Studio home">
     <span class="logo">AS</span> AS Tech Studio<span class="pink">.</span>
   </a>
 
@@ -401,3 +566,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+```
