@@ -1,4 +1,3 @@
-```javascript
 const toggle = document.getElementById("toggle");
 const nav = document.getElementById("nav");
 const year = document.getElementById("year");
@@ -73,4 +72,3 @@ ${name}`
       `mailto:${contactEmail}?subject=${subject}&body=${body}`;
   });
 }
-```
