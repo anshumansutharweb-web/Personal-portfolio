@@ -216,7 +216,7 @@ button, input, select, textarea {
 header#header {
   position: sticky;
   top: 0;
-  height: var(--header-height);
+  min-height: var(--header-height);
   background: rgba(6, 9, 19, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -235,7 +235,7 @@ header#header.scrolled {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  min-height: var(--header-height);
 }
 
 .brand {
@@ -243,6 +243,29 @@ header#header.scrolled {
   align-items: center;
   gap: 12px;
   color: #ffffff;
+}
+
+.brand-logo {
+  --logo-w: clamp(84px, 5vw + 20px, 92px);
+  width: var(--logo-w);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  margin-top: calc(var(--logo-w) * -0.16);
+  margin-bottom: calc(var(--logo-w) * -0.24);
+  margin-left: calc(var(--logo-w) * -0.09);
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.45));
+}
+
+header#header .brand-text-group {
+  display: none;
 }
 
 .logo {
@@ -2768,6 +2791,14 @@ nav#nav {
   margin-bottom: 16px;
 }
 
+.site-footer .brand-logo {
+  --logo-w: 80px;
+}
+
+.site-footer .brand-text-group {
+  display: none;
+}
+
 .footer-tagline {
   font-family: var(--font-heading);
   font-size: 16px;
@@ -2894,6 +2925,14 @@ nav#nav {
    14. Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  nav#nav {
+    gap: 18px;
+  }
+
+  .brand-logo {
+    --logo-w: clamp(78px, 8vw, 84px);
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -2965,6 +3004,10 @@ nav#nav {
 @media (max-width: 768px) {
   :root {
     --header-height: 70px;
+  }
+
+  .brand-logo {
+    --logo-w: clamp(72px, 10vw, 76px);
   }
 
   #toggle {
@@ -3388,11 +3431,26 @@ nav#nav {
   .bottom-badge span:last-child {
     word-break: break-word;
   }
+  .brand-logo {
+    --logo-w: clamp(66px, 15vw, 70px);
+  }
+
+  .site-footer .brand-logo {
+    --logo-w: 68px;
+  }
 }
 
 @media (max-width: 360px) {
   .wrap {
     width: min(var(--container-max), calc(100% - 24px));
+  }
+
+  .brand-logo {
+    --logo-w: 64px;
+  }
+
+  .site-footer .brand-logo {
+    --logo-w: 62px;
   }
 
   .sb-top-stats {
