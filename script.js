@@ -65,21 +65,38 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 4. Contact Form Validation & Mailto Generation
+  // 4. Accessible FAQ Accordion: Close other open questions when one is expanded
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (faqItems.length > 0) {
+    faqItems.forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          faqItems.forEach((other) => {
+            if (other !== item && other.open) {
+              other.removeAttribute('open');
+            }
+          });
+        }
+      });
+    });
+  }
+
+  // 5. Contact Form Validation, Anti-Spam & Mailto Generation
   const contactForm = document.getElementById('contactForm');
   const nameInput = document.getElementById('clientName');
   const emailInput = document.getElementById('clientEmail');
+  const companyInput = document.getElementById('companyName');
   const typeSelect = document.getElementById('projectType');
-  const platformSelect = document.getElementById('platform');
   const budgetSelect = document.getElementById('budget');
+  const timelineSelect = document.getElementById('timeline');
   const detailsInput = document.getElementById('details');
+  const honeyInput = document.getElementById('formHoney');
+  const submitBtn = document.getElementById('submitBtn');
   const statusEl = document.getElementById('status');
 
   const nameError = document.getElementById('nameError');
   const emailError = document.getElementById('emailError');
   const typeError = document.getElementById('typeError');
-  const platformError = document.getElementById('platformError');
-  const budgetError = document.getElementById('budgetError');
   const detailsError = document.getElementById('detailsError');
 
   // Helper to show/hide errors
@@ -107,12 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeSelect) {
     typeSelect.addEventListener('change', () => setFieldError(typeSelect, typeError, ''));
   }
-  if (platformSelect) {
-    platformSelect.addEventListener('change', () => setFieldError(platformSelect, platformError, ''));
-  }
-  if (budgetSelect) {
-    budgetSelect.addEventListener('change', () => setFieldError(budgetSelect, budgetError, ''));
-  }
   if (detailsInput) {
     detailsInput.addEventListener('input', () => setFieldError(detailsInput, detailsError, ''));
   }
@@ -124,29 +135,40 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (contactForm) {
+    let isSubmitting = false;
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
+      // Basic Anti-Spam Honeypot check
+      if (honeyInput && honeyInput.value.trim() !== '') {
+        console.warn('Spam detected via honeypot.');
+        return;
+      }
+
+      if (isSubmitting) return;
+
       const name = nameInput ? nameInput.value.trim() : '';
       const email = emailInput ? emailInput.value.trim() : '';
+      const company = companyInput ? companyInput.value.trim() : '';
       const type = typeSelect ? typeSelect.value : '';
-      const platform = platformSelect ? platformSelect.value : '';
-      const budget = budgetSelect ? budgetSelect.value : '';
+      const budget = budgetSelect && budgetSelect.value ? budgetSelect.value : 'Not specified / Flexible';
+      const timeline = timelineSelect && timelineSelect.value ? timelineSelect.value : 'Flexible';
       const details = detailsInput ? detailsInput.value.trim() : '';
 
       let isValid = true;
       let firstInvalidEl = null;
 
-      // Validate Name
+      // Validate Name (required)
       if (!name || name.length < 2) {
-        setFieldError(nameInput, nameError, 'Please provide your name or company name.');
+        setFieldError(nameInput, nameError, 'Please provide your full name or company contact.');
         isValid = false;
         if (!firstInvalidEl) firstInvalidEl = nameInput;
       } else {
         setFieldError(nameInput, nameError, '');
       }
 
-      // Validate Email
+      // Validate Email (required + strict regex)
       if (!email) {
         setFieldError(emailInput, emailError, 'Please provide your email address.');
         isValid = false;
@@ -159,36 +181,18 @@ document.addEventListener('DOMContentLoaded', () => {
         setFieldError(emailInput, emailError, '');
       }
 
-      // Validate Service Category
+      // Validate Service Required (required)
       if (!type) {
-        setFieldError(typeSelect, typeError, 'Please choose a primary service category.');
+        setFieldError(typeSelect, typeError, 'Please choose a primary service required.');
         isValid = false;
         if (!firstInvalidEl) firstInvalidEl = typeSelect;
       } else {
         setFieldError(typeSelect, typeError, '');
       }
 
-      // Validate Target Platform
-      if (!platform) {
-        setFieldError(platformSelect, platformError, 'Please choose a target platform for your project.');
-        isValid = false;
-        if (!firstInvalidEl) firstInvalidEl = platformSelect;
-      } else {
-        setFieldError(platformSelect, platformError, '');
-      }
-
-      // Validate Budget
-      if (!budget) {
-        setFieldError(budgetSelect, budgetError, 'Please choose an approximate investment range.');
-        isValid = false;
-        if (!firstInvalidEl) firstInvalidEl = budgetSelect;
-      } else {
-        setFieldError(budgetSelect, budgetError, '');
-      }
-
-      // Validate Details
+      // Validate Project Description (required, min 10 chars)
       if (!details || details.length < 10) {
-        setFieldError(detailsInput, detailsError, 'Please share at least a sentence or two (10+ characters) about your project vision.');
+        setFieldError(detailsInput, detailsError, 'Please describe your project vision or requirements (at least 10 characters).');
         isValid = false;
         if (!firstInvalidEl) firstInvalidEl = detailsInput;
       } else {
@@ -206,9 +210,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Clear any previous error status
+      // Indicate loading state & prevent duplicate submission
+      isSubmitting = true;
+      if (submitBtn) {
+        submitBtn.classList.add('is-loading');
+        submitBtn.disabled = true;
+      }
+
       if (statusEl) {
-        statusEl.className = 'status-box active success';
+        statusEl.className = 'status-box active';
+        statusEl.textContent = 'Preparing your project enquiry draft...';
       }
 
       // Construct Structured Mailto URI
@@ -219,15 +230,16 @@ document.addEventListener('DOMContentLoaded', () => {
 I would like to discuss a project with you.
 
 --------------------------------------------------
-CLIENT & PROJECT OVERVIEW
+CLIENT & PROJECT DETAILS
 --------------------------------------------------
-Name / Company   : ${name}
+Full Name        : ${name}
 Email Address    : ${email}
-Service Category : ${type}
-Target Platform  : ${platform}
-Estimated Budget : ${budget}
+Company / Entity : ${company ? company : 'Not provided'}
+Service Required : ${type}
+Budget Range     : ${budget}
+Expected Timeline: ${timeline}
 
-Project Goals, Scope & Timeline:
+Project Description & Requirements:
 ${details}
 
 --------------------------------------------------
@@ -237,22 +249,68 @@ Sent via AS Tech Studio Website (https://anshumansutharweb-web.github.io/Persona
       const recipient = 'anshumansuthar.web@gmail.com';
       const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
-      // Show user-friendly feedback
-      if (statusEl) {
-        statusEl.innerHTML = `
-          <strong>✓ Enquiry Prepared Successfully!</strong><br>
-          Opening your email application now... If it doesn't open automatically,
-          <a href="${mailtoUrl}">click here to launch your email client</a> or send directly to
-          <strong>${recipient}</strong>.
-        `;
-      }
+      setTimeout(() => {
+        // Reset loading state
+        isSubmitting = false;
+        if (submitBtn) {
+          submitBtn.classList.remove('is-loading');
+          submitBtn.disabled = false;
+        }
 
-      // Open email client
-      try {
-        window.location.href = mailtoUrl;
-      } catch (err) {
-        console.warn('Could not trigger mailto automatically:', err);
-      }
+        // Display transparent status messaging
+        if (statusEl) {
+          statusEl.className = 'status-box active success';
+          statusEl.innerHTML = `
+            <strong>✓ Enquiry Draft Prepared Successfully!</strong><br>
+            Opening your default email application with your project details...<br>
+            <div class="status-details-pre">${bodyText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+            <div class="status-actions-row">
+              <a class="btn-demo btn-demo-primary" href="${mailtoUrl}">Launch Email Client ↗</a>
+              <button type="button" class="btn-copy-msg" id="copyMsgBtn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span id="copyBtnText">Copy Details to Clipboard</span>
+              </button>
+            </div>
+            <p style="margin-top:10px; font-size:11.5px; color:#cbd5e1;">
+              If an email app doesn't open automatically, copy the details above and send directly to <strong>${recipient}</strong>.
+            </p>
+          `;
+
+          // Handle Copy to Clipboard
+          const copyBtn = document.getElementById('copyMsgBtn');
+          const copyBtnText = document.getElementById('copyBtnText');
+          if (copyBtn && copyBtnText) {
+            copyBtn.addEventListener('click', async () => {
+              try {
+                await navigator.clipboard.writeText(bodyText);
+                copyBtnText.textContent = '✓ Copied to Clipboard!';
+                setTimeout(() => {
+                  copyBtnText.textContent = 'Copy Details to Clipboard';
+                }, 3000);
+              } catch (err) {
+                // Fallback for older browsers
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = bodyText;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextArea);
+                copyBtnText.textContent = '✓ Copied!';
+                setTimeout(() => {
+                  copyBtnText.textContent = 'Copy Details to Clipboard';
+                }, 3000);
+              }
+            });
+          }
+        }
+
+        // Open email client via mailto
+        try {
+          window.location.href = mailtoUrl;
+        } catch (err) {
+          console.warn('Could not launch mailto client automatically:', err);
+        }
+      }, 500);
     });
   }
 });
